@@ -1,0 +1,384 @@
+{
+	"info": {
+		"_postman_id": "bbaa16a9-4898-4e20-a612-9fdc0dbae4aa",
+		"name": "Laboratorio2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"correo\" : \"is4teacj@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:6000/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sucursales",
+			"item": [
+				{
+					"name": "agregar sucursal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA0Y2Q4OTc0NDlhODU0NGEwZDM4YjciLCJpYXQiOjE2NzgwMzYzNzUsImV4cCI6MTY3ODA1MDc3NX0.joF5GONunnc539lNx2jXyc24zxjyUlpHrbx87vnhrrA",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"AwDAjksaD\",\r\n    \"direcciones\" : \"zona9\",\r\n    \"municipio\": \"guatemala\"\r\n    \r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:6000/api/sucursal/agregar",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"sucursal",
+								"agregar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "emostrar sucursal",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA0Mjc5YzcwYTM5YjBmZDQ0MmUwMmEiLCJpYXQiOjE2NzgwMzU4MjAsImV4cCI6MTY3ODA1MDIyMH0.jlwwj9hmzwhsGArCb6Tg3NOcCvBWxDJFVu-thjSQTFE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"tikalFutura\",\r\n    \"direccion\":\"zona7\"\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:6000/api/sucursal/mostrar",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"sucursal",
+								"mostrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar sucursal",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA0ZDhjODU5ZGRlMTE4YjJlZTMwZDQiLCJpYXQiOjE2NzgwNDM2MjQsImV4cCI6MTY3ODA1ODAyNH0.tpMAhSL_Kr4z_C1MXhRTb4QpY6YeX1gDphmTMImbG5E",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Miraflores\",\r\n    \"direcciones\" : \"zona 7\",\r\n    \"municipio\": \"guatemala\"\r\n    \r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:6000/api/sucursal/editar/6404e50fb6d8464705794e9b",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"sucursal",
+								"editar",
+								"6404e50fb6d8464705794e9b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "elliminar sucursal",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA0ZDhjODU5ZGRlMTE4YjJlZTMwZDQiLCJpYXQiOjE2NzgwNDM2MjQsImV4cCI6MTY3ODA1ODAyNH0.tpMAhSL_Kr4z_C1MXhRTb4QpY6YeX1gDphmTMImbG5E",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:6000/api/sucursal/delete/6404cdb27449a8544a0d38bd",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"sucursal",
+								"delete",
+								"6404cdb27449a8544a0d38bd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Empresa",
+			"item": [
+				{
+					"name": "mostrarSucursal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:6000/api/empresa/mostrarSucursal/6404d8c859dde118b2ee30d4",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"empresa",
+								"mostrarSucursal",
+								"6404d8c859dde118b2ee30d4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "agregar empresa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"campero\",\r\n    \"correo\": \"campero@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"tipo\" : \"RESTAURANTE\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:6000/api/empresa/agregar",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"empresa",
+								"agregar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "colocarScursal",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA0Y2Q4OTc0NDlhODU0NGEwZDM4YjciLCJpYXQiOjE2NzgwMzYzNzUsImV4cCI6MTY3ODA1MDc3NX0.joF5GONunnc539lNx2jXyc24zxjyUlpHrbx87vnhrrA",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sucursal\": [\"6404ce8b1db08e6b59875833\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:6000/api/empresa/sucursal",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"empresa",
+								"sucursal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editar empresa",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA0ZDhjODU5ZGRlMTE4YjJlZTMwZDQiLCJpYXQiOjE2NzgwNDM2MjQsImV4cCI6MTY3ODA1ODAyNH0.tpMAhSL_Kr4z_C1MXhRTb4QpY6YeX1gDphmTMImbG5E",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"is4teach\",\r\n    \"correo\": \"iteachs@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"tipo\" : \"TECNOLOGIA\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:6000/api/empresa/editar/6404d8c859dde118b2ee30d4",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"empresa",
+								"editar",
+								"6404d8c859dde118b2ee30d4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminarEmpresa",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA0ZTk4ZDUxNjM0OGQ1NzkxZDk0YjkiLCJpYXQiOjE2NzgwNDM1NjUsImV4cCI6MTY3ODA1Nzk2NX0.PMwzf8fxkErHW4QUvjafcAJint7_ZyHqeR9L2Nk9v7k",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"campero\",\r\n    \"correo\": \"ias4teacj@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"tipo\" : \"TECNOLOGIA\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:6000/api/empresa/delete/6404e98d516348d5791d94b9",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"empresa",
+								"delete",
+								"6404e98d516348d5791d94b9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mostrar empresas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA0Mjc5YzcwYTM5YjBmZDQ0MmUwMmEiLCJpYXQiOjE2NzgwMzU4MjAsImV4cCI6MTY3ODA1MDIyMH0.jlwwj9hmzwhsGArCb6Tg3NOcCvBWxDJFVu-thjSQTFE",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"tikalFutura\",\r\n    \"direccion\":\"zona7\"\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:6000/api/sucursal/mostrar",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"api",
+								"sucursal",
+								"mostrar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
